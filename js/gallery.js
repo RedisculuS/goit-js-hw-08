@@ -91,18 +91,16 @@ function createMarkup(arr) {
 
 function handleClick(event) {
   event.preventDefault();
-  //   if (event.target === event.currentTarget) {
-  //     return;
-  //   }
+  if (event.target === event.currentTarget) {
+    return;
+  }
 
   //   console.log(event.target.dataset.source);
-
-  //   const currentImg = event.target.closest(".gallery-item");
 
   const instance = basicLightbox.create(
     `
               <div class="modal">
-                 <img src="${event.target.dataset.source}" width="800" height="600">
+                 <img src="${event.target.dataset.source}" >
               </div>
           `
   );
